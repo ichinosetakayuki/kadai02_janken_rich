@@ -160,7 +160,7 @@ function drawSingleSeat() {
   } else {
     seatsPool = availableSeats;
   }
-  console.log('抽選対象オブジェクト', seatsPool);
+  // console.log('抽選対象オブジェクト', seatsPool);
 
   const randomIndex = Math.floor(Math.random() * seatsPool.length);
   const seat = seatsPool[randomIndex];
@@ -196,7 +196,7 @@ function drawPairSeats() {
       weightedSeats.push(seat);
     }
   }
-  console.log('ウェイティッドシート', weightedSeats);
+  // console.log('ウェイティッドシート', weightedSeats);
   while (triedSeatIds.size < weightedSeats.length) {
     const availableSeat = getRandomSeat(weightedSeats.filter(seat => !triedSeatIds.has(seat.id)));
     triedSeatIds.add(availableSeat.id);
