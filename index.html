@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>座席抽選システム</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1><span class="ttl-year">2025</span><span class="ttl-name">森高千里</span><span class="ttl-tour">Concert
+      tour</span><span class="ttl-tour-ttl">あなたも私もファイト!!</span></h1>
+
+  <main>
+    <section class="input_area">
+      <div class="lottery_box">
+        <h2>チケット抽選はこちら</h2>
+        <div class="fan_check_area">
+          <label for="isFan">ファンクラブの方はチェック</label>
+          <div class="arrow"></div>
+          <input type="checkbox" id="isFan">
+        </div>
+        <div class="ticket_count_area">
+          <label for="ticketCount">
+            チケット枚数を選んでください
+            <select id="ticketCount">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </label>
+        </div>
+        <button id="lottery_btn">抽　選</button>
+        <div class="seat_box">
+          <p>あなたのお席は</p>
+          <div id="seat"></div>
+          <p>です。</p>
+        </div>
+        <button id="clear">クリア</button>
+      </div>
+
+
+      <div class="cancel_box">
+        <h2>キャンセルはこちら</h2>
+        <p>座席番号を入力してください。</p>
+        <input type="text" id="cancel_input" placeholder="入力例:B16">
+        <button id="cancel_btn">キャンセル</button>
+      </div>
+    </section>
+
+
+    <section class="seatmap">
+      <div class="seatmap_ttl_box">
+        <div class="seatmap_ttl">
+          <h2>福岡市民ホール　中ホール</h2>
+          <h2>Seat Map</h2>
+        </div>
+        <div class="total_seats">
+          <P>598席</P>
+        </div>
+        <div class="stage">ステージ</div>
+        <div class="counter_box">
+          <div>発券枚数 :
+            <span id="issuedCount">0</span>
+          </div>
+          <div>残席数　 :
+            <span id="remainedCount">598</span>
+          </div>
+        </div>
+      </div>
+      <div id="front">
+        <ul id="frontLeft">
+          <li id="FL_row_A" class="row dummy">
+            <div id="A9" class="seat"></div>
+          </li>
+        </ul>
+        <ul id="FL_aisle"></ul>
+        <ul id="frontCenter"></ul>
+        <ul id="FR_aisle"></ul>
+        <ul id="frontRight">
+          <li id="FR_row_A" class="row dummy">
+            <div id="A27" class="seat"></div>
+        </ul>
+      </div>
+      <div id="back">
+        <ul id="backLeft"></ul>
+        <ul id="BL_aisle"></ul>
+        <ul id="backCenter"></ul>
+        <ul id="BR_aisle"></ul>
+        <ul id="backRight"></ul>
+      </div>
+      <div class="seatmap_note">
+        <P>※実際の公演は大ホールです。</P>
+      </div>
+    </section>
+  </main>
+  <button id="save">保存</button>
+  <button id="reset">リセット</button>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
