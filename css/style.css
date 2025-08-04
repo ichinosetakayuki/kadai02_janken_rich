@@ -322,15 +322,19 @@ main {
   font-weight: bold;
 }
 
-.note {
+/* .note {
   display: flex;
   justify-content: center;
-}
+} */
 
 div>img {
   width: 16px;
   height: 16px;
   transform: rotate(15deg);
+}
+
+.seatmap_note p {
+  font-size: 0.8rem;
 }
 
 /* ここからレスポンシブ対応 */
